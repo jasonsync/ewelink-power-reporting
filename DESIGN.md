@@ -7,7 +7,7 @@ Dependencies: https://github.com/jasonsync/ewelink-api-fixed
 email reporting service:
 node.js reporting service to send email report once a day / week / month
 
-	```sql
+  ```sql
   SELECT * FROM your_table WHERE month(create_date) = 5
   ```
 
@@ -27,7 +27,7 @@ node.js reporting service to send email report once a day / week / month
  - last_successful_data_retrieval = datetime
 
 
-#### sites = specific site (
+#### sites = specific site
  - id = int
  - name = varchar
  - address = varchar
@@ -42,12 +42,12 @@ node.js reporting service to send email report once a day / week / month
  - description = varchar
 
 #### accounts
--	id
--	name
--	description
--	ewelink_email
--	ewelink_password
--	ewelink_region
+- id
+- name
+- description
+- ewelink_email
+- ewelink_password
+- ewelink_region
 
 #### power_consumption_log
  - id = int
