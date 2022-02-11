@@ -22,7 +22,7 @@ node.js reporting service to send email report once a day / week / month
  - ewelink_name
  - ewelink_group
  - ewelink_device_id = int
- - account_id = int
+ - ewelink_account_id = int
  - site_id = int
  - last_successful_data_retrieval = datetime
 
@@ -41,7 +41,7 @@ node.js reporting service to send email report once a day / week / month
  - name = varchar
  - description = varchar
 
-#### accounts
+#### ewelink_accounts
 - id
 - name
 - description
