@@ -16,57 +16,66 @@ node.js reporting service to send email report once a day / week / month
 ### DATABASE:
 
 #### devices:
- - **id** = (int 11)
+ - **id** = int ***PK***
  - **name** (varchar 100)
  - **group** (varchar 100) _NULL_
  - **ewelink_name** (varchar 100) _NULL_
  - **ewelink_group** (varchar 100) _NULL_
- - **ewelink_device_id** (int 11)
- - **ewelink_account_id** (int 11)
- - **site_id** (int 11) _NULL_
+ - **ewelink_device_id** int
+ - **ewelink_account_id** int
+ - **site_id** int _NULL_
  - **last_successful_data_retrieval** (timestamp) _NULL_
  - **created_timestamp** (timestamp) _current_timestamp()_
- - **created_by_user_id** (int 11) _NULL_
+ - **created_by_user_id** int _NULL_
  - **created_timestamp** current_timestamp() (timestamp)
  - **created_by_user_id** int _NULL_
 
 
 #### sites = specific site
- - id = int
- - name = varchar
- - address = varchar
- - longitude = varchar
- - latitude = varchar
- - site_group_id = NULL
- - kwh_cost_cents = varchar
- - created_timestamp = current_timestamp() (time this row was inserted)
+ - **id** = int ***PK***
+ - **name** = varchar
+ - **address** = varchar
+ - **longitude** = varchar
+ - **latitude** = varchar
+ - **site_group_id** = _NULL_
+ - **kwh_cost_cents** = varchar
+ - **created_timestamp** (timestamp) _current_timestamp()_
+ - **created_by_user_id** int _NULL_
+ - **created_timestamp** current_timestamp() (timestamp)
+ - **created_by_user_id** int _NULL_
 
 #### site_groups = group of sites
- - id = int
- - name = varchar
- - description = varchar
- - created_timestamp = current_timestamp() (time this row was inserted)
+ - **id** = int ***PK***
+ - **name** = varchar
+ - **description** = varchar
+ - **created_timestamp** (timestamp) _current_timestamp()_
+ - **created_by_user_id** int _NULL_
+ - **created_timestamp** current_timestamp() (timestamp)
+ - **created_by_user_id** int _NULL_
 
 #### ewelink_accounts
-- id
-- name
-- description
-- ewelink_email
-- ewelink_password
-- ewelink_region
- - created_timestamp = current_timestamp() (time this row was inserted)
+- **id** int ***PK***
+- **name**
+- **description**
+- **ewelink_email**
+- **ewelink_password**
+- **ewelink_region**
+- **created_timestamp** (timestamp) _current_timestamp()_
+- **created_by_user_id** int _NULL_
+- **created_timestamp** current_timestamp() (timestamp)
+- **created_by_user_id** int _NULL_
 
 #### power_consumption_log
- - id = int
- - device_id = int
- - date = datetime (there should be one record per day)
- - created_timestamp = current_timestamp() (time this row was inserted)
+ - **id** = int ***PK***
+ - **device_id** = int
+ - **date** = datetime (there should be one record per day)
+ - **created_timestamp** = current_timestamp() (time this row was inserted)
 
 #### monthly_reports
- - id = int
- - device_id = int
- - month = int
- - year = int
- - consumption_wh = varchar
- - total_cost_cents = varchar
- - created_timestamp = current_timestamp() (time this row was inserted)
+ - **id** = int ***PK***
+ - **device_id** = int
+ - **month** = int
+ - **year** = int
+ - **consumption_wh** = varchar
+ - **total_cost_cents** = varchar
+ - **created_timestamp** = current_timestamp() (time this row was inserted)
